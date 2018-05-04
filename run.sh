@@ -109,6 +109,7 @@ XAUTH_POOL=${VPN_XAUTH_POOL:-'192.168.43.10-192.168.43.250'}
 DNS_SRV1=${VPN_DNS_SRV1:-'8.8.8.8'}
 DNS_SRV2=${VPN_DNS_SRV2:-'8.8.4.4'}
 
+
 # Create IPsec (Libreswan) config
 cat > /etc/ipsec.conf <<EOF
 version 2.0
@@ -280,6 +281,7 @@ EOF
 
 # Load IPsec NETKEY kernel module
 modprobe af_key
+service rsyslog restart
 
 # Start services
 mkdir -p /var/run/pluto /var/run/xl2tpd
