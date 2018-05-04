@@ -287,3 +287,5 @@ rm -f /var/run/pluto/pluto.pid /var/run/xl2tpd.pid
 
 /usr/local/sbin/ipsec start --config /etc/ipsec.conf
 exec /usr/sbin/xl2tpd -D -c /etc/xl2tpd/xl2tpd.conf
+
+/bin/bash
