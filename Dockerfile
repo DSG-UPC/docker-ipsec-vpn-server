@@ -12,7 +12,7 @@ RUN apt-get -yqq update \
          wget dnsutils openssl ca-certificates kmod \
          iproute gawk grep sed net-tools iptables \
          bsdmainutils libcurl3-nss \
-         libnss3-tools libevent-dev libcap-ng0 xl2tpd \
+         libnss3-tools libevent-dev libcap-ng0 \
          libnss3-dev libnspr4-dev pkg-config libpam0g-dev \
          libcap-ng-dev libcap-ng-utils libselinux1-dev \
          libcurl4-nss-dev flex bison gcc make rsyslog\
@@ -39,8 +39,7 @@ RUN apt-get -yqq update \
 COPY ./run.sh /opt/src/run.sh
 RUN chmod 755 /opt/src/run.sh
 
-COPY ./xl2tpd-1.3.8_pacthed_amd64.deb /opt/src/xl2tpd-1.3.8_pacthed_amd64.deb
-
+COPY ./xl2tpd_1.3.11-1_amd64.deb /opt/src/xl2tpd_1.3.11-1_amd64.deb
 
 EXPOSE 500/udp 4500/udp
 
