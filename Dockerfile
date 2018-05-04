@@ -16,6 +16,7 @@ RUN apt-get -yqq update \
          libnss3-dev libnspr4-dev pkg-config libpam0g-dev \
          libcap-ng-dev libcap-ng-utils libselinux1-dev \
          libcurl4-nss-dev flex bison gcc make rsyslog\
+         ppp libpcap0.8\
     && wget -t 3 -T 30 -nv -O "libreswan.tar.gz" "https://github.com/libreswan/libreswan/archive/v${SWAN_VER}.tar.gz" \
     || wget -t 3 -T 30 -nv -O "libreswan.tar.gz" "https://download.libreswan.org/libreswan-${SWAN_VER}.tar.gz" \
     && tar xzf "libreswan.tar.gz" \
